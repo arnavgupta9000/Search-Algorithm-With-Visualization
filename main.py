@@ -117,10 +117,10 @@ def main():
         elif o in ("--plots"):
             plots = True
 
-    test_instances = "starter/test-instances/testinstances.txt"
+    test_instances = "test-instances/testinstances.txt"
     
     # Dijkstra's algorithm and A* should receive the following map object as input
-    gridded_map = Map("starter/dao-map/brc000d.map")
+    gridded_map = Map("dao-map/brc000d.map")
     
     nodes_expanded_dijkstra = []  
     nodes_expanded_astar = []
@@ -145,7 +145,7 @@ def main():
         start = start_states[i]
         goal = goal_states[i]
 
-        gridded_map = Map("starter/dao-map/brc000d.map")
+        gridded_map = Map("dao-map/brc000d.map")
     
         time_start = time.time()
         # print(start_states)
