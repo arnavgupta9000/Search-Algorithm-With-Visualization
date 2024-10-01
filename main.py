@@ -148,13 +148,9 @@ def main():
         gridded_map = Map("dao-map/brc000d.map")
     
         time_start = time.time()
-        # print(start_states)
-        # print(start_states[i]) # [x,y]
-        dijkstra = Dijkstra(start_states[i], goal_states[i],gridded_map) # added line
-        cost, expanded_diskstra = dijkstra.calc()  # replace None, None with the call to your Dijkstra's implementation
+        dijkstra = Dijkstra(start_states[i], goal_states[i],gridded_map) 
+        cost, expanded_diskstra = dijkstra.calc() 
         time_end = time.time()
-        # print(time_end - time_start)
-
         time_dijkstra.append(time_end - time_start)
 
         if cost != solution_costs[i]:
@@ -170,7 +166,7 @@ def main():
     
         time_start = time.time()
         a_star = A_star(start_states[i], goal_states[i], gridded_map)
-        cost, expanded_astar = a_star.calc() # replace None, None with the call to your A* implementation
+        cost, expanded_astar = a_star.calc()
         time_end = time.time()
 
         nodes_expanded_astar.append(expanded_astar)
